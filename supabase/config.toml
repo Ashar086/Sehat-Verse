@@ -1,0 +1,47 @@
+project_id = "baowxqhfkmpjlxmrnvek"
+
+[auth]
+site_url = "https://5db5f053-0e9f-4a6e-87f4-5794989b8fd6.lovableproject.com"
+enabled = true
+
+[functions.triage-agent]
+verify_jwt = false
+
+[functions.eligibility-agent]
+verify_jwt = false
+
+[functions.facility-finder]
+verify_jwt = false
+
+[functions.followup-agent]
+verify_jwt = false
+
+[functions.imaging-agent]
+verify_jwt = false
+
+[functions.knowledge-agent]
+verify_jwt = false
+
+[functions.surveillance-agent]
+verify_jwt = false
+
+[functions.doctor-companion]
+verify_jwt = false
+
+[functions.hospital-resource]
+verify_jwt = false
+
+[functions.lhw-route]
+verify_jwt = false
+
+[functions.check-reminders]
+verify_jwt = false
+
+[functions.outbreak-forecast]
+verify_jwt = false
+
+[functions.book-appointment]
+verify_jwt = false
+
+[functions.update-appointment]
+verify_jwt = false

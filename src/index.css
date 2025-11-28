@@ -1,0 +1,433 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root, .theme-cyber-cyan {
+    /* Revolutionary Futuristic Medical Design System - Cyber Cyan */
+    --background: 220 25% 5%;
+    --foreground: 180 100% 95%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 180 100% 95%;
+
+    --popover: 220 22% 10%;
+    --popover-foreground: 180 100% 95%;
+
+    /* Neon Cyan Primary */
+    --primary: 180 100% 50%;
+    --primary-foreground: 220 25% 5%;
+    --primary-glow: 180 100% 70%;
+
+    /* Electric Magenta Secondary */
+    --secondary: 320 100% 60%;
+    --secondary-foreground: 220 25% 5%;
+
+    /* Neon Purple Accent */
+    --accent: 270 100% 65%;
+    --accent-foreground: 220 25% 5%;
+
+    --muted: 220 18% 15%;
+    --muted-foreground: 180 30% 60%;
+
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 220 25% 5%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 15%;
+    --ring: 180 100% 50%;
+    --radius: 1.25rem;
+
+    /* Health Status with Neon Glow */
+    --health-urgent: 0 100% 60%;
+    --health-moderate: 40 100% 60%;
+    --health-normal: 140 100% 60%;
+    
+    /* Futuristic Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(180 100% 50%), hsl(270 100% 65%), hsl(320 100% 60%));
+    --gradient-card: linear-gradient(145deg, hsl(220 20% 8% / 0.5), hsl(220 22% 12% / 0.8));
+    --gradient-neon: linear-gradient(90deg, hsl(180 100% 50%), hsl(270 100% 65%), hsl(320 100% 60%));
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(180 100% 50% / 0.3) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(270 100% 65% / 0.25) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsl(320 100% 60% / 0.2) 0px, transparent 50%);
+    
+    /* Neon Shadows & Glows */
+    --shadow-neon-cyan: 0 0 40px hsl(180 100% 50% / 0.5), 0 0 80px hsl(180 100% 50% / 0.3);
+    --shadow-neon-purple: 0 0 40px hsl(270 100% 65% / 0.5), 0 0 80px hsl(270 100% 65% / 0.3);
+    --shadow-neon-magenta: 0 0 40px hsl(320 100% 60% / 0.5), 0 0 80px hsl(320 100% 60% / 0.3);
+    --shadow-glass: 0 8px 32px 0 hsl(180 100% 50% / 0.15);
+    --shadow-depth: 0 20px 60px -15px hsl(180 100% 50% / 0.4);
+
+    --sidebar-background: 220 22% 8%;
+    --sidebar-foreground: 180 100% 95%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 220 25% 5%;
+    --sidebar-accent: 220 18% 15%;
+    --sidebar-accent-foreground: 180 100% 95%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 180 100% 50%;
+  }
+
+  .theme-matrix-green {
+    /* Matrix Green Theme */
+    --background: 120 20% 5%;
+    --foreground: 120 100% 95%;
+
+    --card: 120 15% 8%;
+    --card-foreground: 120 100% 95%;
+
+    --popover: 120 18% 10%;
+    --popover-foreground: 120 100% 95%;
+
+    --primary: 120 100% 50%;
+    --primary-foreground: 120 20% 5%;
+    --primary-glow: 120 100% 70%;
+
+    --secondary: 140 100% 55%;
+    --secondary-foreground: 120 20% 5%;
+
+    --accent: 100 100% 60%;
+    --accent-foreground: 120 20% 5%;
+
+    --muted: 120 15% 15%;
+    --muted-foreground: 120 30% 60%;
+
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 120 20% 5%;
+
+    --border: 120 15% 18%;
+    --input: 120 15% 15%;
+    --ring: 120 100% 50%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(120 100% 50%), hsl(140 100% 55%), hsl(100 100% 60%));
+    --gradient-card: linear-gradient(145deg, hsl(120 15% 8% / 0.5), hsl(120 18% 12% / 0.8));
+    --gradient-neon: linear-gradient(90deg, hsl(120 100% 50%), hsl(140 100% 55%), hsl(100 100% 60%));
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(120 100% 50% / 0.3) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(140 100% 55% / 0.25) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsl(100 100% 60% / 0.2) 0px, transparent 50%);
+
+    --shadow-neon-cyan: 0 0 40px hsl(120 100% 50% / 0.5), 0 0 80px hsl(120 100% 50% / 0.3);
+    --shadow-neon-purple: 0 0 40px hsl(140 100% 55% / 0.5), 0 0 80px hsl(140 100% 55% / 0.3);
+    --shadow-neon-magenta: 0 0 40px hsl(100 100% 60% / 0.5), 0 0 80px hsl(100 100% 60% / 0.3);
+    --shadow-glass: 0 8px 32px 0 hsl(120 100% 50% / 0.15);
+    --shadow-depth: 0 20px 60px -15px hsl(120 100% 50% / 0.4);
+
+    --sidebar-background: 120 18% 8%;
+    --sidebar-foreground: 120 100% 95%;
+    --sidebar-primary: 120 100% 50%;
+    --sidebar-primary-foreground: 120 20% 5%;
+    --sidebar-accent: 120 15% 15%;
+    --sidebar-accent-foreground: 120 100% 95%;
+    --sidebar-border: 120 15% 18%;
+    --sidebar-ring: 120 100% 50%;
+  }
+
+  .theme-cyber-blue {
+    /* Cyber Blue Theme */
+    --background: 220 30% 5%;
+    --foreground: 220 100% 95%;
+
+    --card: 220 25% 8%;
+    --card-foreground: 220 100% 95%;
+
+    --popover: 220 28% 10%;
+    --popover-foreground: 220 100% 95%;
+
+    --primary: 220 100% 55%;
+    --primary-foreground: 220 30% 5%;
+    --primary-glow: 220 100% 75%;
+
+    --secondary: 240 100% 60%;
+    --secondary-foreground: 220 30% 5%;
+
+    --accent: 200 100% 65%;
+    --accent-foreground: 220 30% 5%;
+
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 30% 60%;
+
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 220 30% 5%;
+
+    --border: 220 22% 18%;
+    --input: 220 22% 15%;
+    --ring: 220 100% 55%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(220 100% 55%), hsl(240 100% 60%), hsl(200 100% 65%));
+    --gradient-card: linear-gradient(145deg, hsl(220 25% 8% / 0.5), hsl(220 28% 12% / 0.8));
+    --gradient-neon: linear-gradient(90deg, hsl(220 100% 55%), hsl(240 100% 60%), hsl(200 100% 65%));
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(220 100% 55% / 0.3) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(240 100% 60% / 0.25) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsl(200 100% 65% / 0.2) 0px, transparent 50%);
+
+    --shadow-neon-cyan: 0 0 40px hsl(220 100% 55% / 0.5), 0 0 80px hsl(220 100% 55% / 0.3);
+    --shadow-neon-purple: 0 0 40px hsl(240 100% 60% / 0.5), 0 0 80px hsl(240 100% 60% / 0.3);
+    --shadow-neon-magenta: 0 0 40px hsl(200 100% 65% / 0.5), 0 0 80px hsl(200 100% 65% / 0.3);
+    --shadow-glass: 0 8px 32px 0 hsl(220 100% 55% / 0.15);
+    --shadow-depth: 0 20px 60px -15px hsl(220 100% 55% / 0.4);
+
+    --sidebar-background: 220 28% 8%;
+    --sidebar-foreground: 220 100% 95%;
+    --sidebar-primary: 220 100% 55%;
+    --sidebar-primary-foreground: 220 30% 5%;
+    --sidebar-accent: 220 20% 15%;
+    --sidebar-accent-foreground: 220 100% 95%;
+    --sidebar-border: 220 22% 18%;
+    --sidebar-ring: 220 100% 55%;
+  }
+
+  .theme-medical-red {
+    /* Medical Red Theme */
+    --background: 0 20% 5%;
+    --foreground: 0 100% 95%;
+
+    --card: 0 15% 8%;
+    --card-foreground: 0 100% 95%;
+
+    --popover: 0 18% 10%;
+    --popover-foreground: 0 100% 95%;
+
+    --primary: 0 100% 60%;
+    --primary-foreground: 0 20% 5%;
+    --primary-glow: 0 100% 75%;
+
+    --secondary: 340 100% 60%;
+    --secondary-foreground: 0 20% 5%;
+
+    --accent: 20 100% 65%;
+    --accent-foreground: 0 20% 5%;
+
+    --muted: 0 15% 15%;
+    --muted-foreground: 0 30% 60%;
+
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 0 20% 5%;
+
+    --border: 0 15% 18%;
+    --input: 0 15% 15%;
+    --ring: 0 100% 60%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(0 100% 60%), hsl(340 100% 60%), hsl(20 100% 65%));
+    --gradient-card: linear-gradient(145deg, hsl(0 15% 8% / 0.5), hsl(0 18% 12% / 0.8));
+    --gradient-neon: linear-gradient(90deg, hsl(0 100% 60%), hsl(340 100% 60%), hsl(20 100% 65%));
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(0 100% 60% / 0.3) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(340 100% 60% / 0.25) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsl(20 100% 65% / 0.2) 0px, transparent 50%);
+
+    --shadow-neon-cyan: 0 0 40px hsl(0 100% 60% / 0.5), 0 0 80px hsl(0 100% 60% / 0.3);
+    --shadow-neon-purple: 0 0 40px hsl(340 100% 60% / 0.5), 0 0 80px hsl(340 100% 60% / 0.3);
+    --shadow-neon-magenta: 0 0 40px hsl(20 100% 65% / 0.5), 0 0 80px hsl(20 100% 65% / 0.3);
+    --shadow-glass: 0 8px 32px 0 hsl(0 100% 60% / 0.15);
+    --shadow-depth: 0 20px 60px -15px hsl(0 100% 60% / 0.4);
+
+    --sidebar-background: 0 18% 8%;
+    --sidebar-foreground: 0 100% 95%;
+    --sidebar-primary: 0 100% 60%;
+    --sidebar-primary-foreground: 0 20% 5%;
+    --sidebar-accent: 0 15% 15%;
+    --sidebar-accent-foreground: 0 100% 95%;
+    --sidebar-border: 0 15% 18%;
+    --sidebar-ring: 0 100% 60%;
+  }
+
+  .theme-white {
+    /* Clean White Theme */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 10%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 240 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+
+    --primary: 220 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 220 100% 60%;
+
+    --secondary: 220 10% 90%;
+    --secondary-foreground: 240 10% 10%;
+
+    --accent: 220 15% 95%;
+    --accent-foreground: 240 10% 10%;
+
+    --muted: 220 10% 95%;
+    --muted-foreground: 240 5% 45%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 100% 50%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(220 100% 50%), hsl(240 100% 60%), hsl(200 100% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 98%), hsl(0 0% 100%));
+    --gradient-neon: linear-gradient(90deg, hsl(220 100% 50%), hsl(240 100% 60%), hsl(200 100% 55%));
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(220 100% 50% / 0.08) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(240 100% 60% / 0.06) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsl(200 100% 55% / 0.05) 0px, transparent 50%);
+
+    --shadow-neon-cyan: 0 0 20px hsl(220 100% 50% / 0.2), 0 0 40px hsl(220 100% 50% / 0.1);
+    --shadow-neon-purple: 0 0 20px hsl(240 100% 60% / 0.2), 0 0 40px hsl(240 100% 60% / 0.1);
+    --shadow-neon-magenta: 0 0 20px hsl(200 100% 55% / 0.2), 0 0 40px hsl(200 100% 55% / 0.1);
+    --shadow-glass: 0 4px 16px 0 hsl(220 13% 10% / 0.05);
+    --shadow-depth: 0 10px 30px -8px hsl(220 13% 10% / 0.1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 10% 10%;
+    --sidebar-primary: 220 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 10% 95%;
+    --sidebar-accent-foreground: 240 10% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 220 100% 50%;
+  }
+
+  .dark {
+    /* Enhanced Dark Mode */
+    --background: 220 30% 3%;
+    --foreground: 180 100% 98%;
+
+    --card: 220 25% 6%;
+    --card-foreground: 180 100% 98%;
+
+    --popover: 220 28% 8%;
+    --popover-foreground: 180 100% 98%;
+
+    --primary: 180 100% 55%;
+    --primary-foreground: 220 30% 3%;
+    --primary-glow: 180 100% 75%;
+
+    --secondary: 320 100% 65%;
+    --secondary-foreground: 220 30% 3%;
+
+    --accent: 270 100% 70%;
+    --accent-foreground: 220 30% 3%;
+
+    --muted: 220 20% 12%;
+    --muted-foreground: 180 40% 65%;
+
+    --destructive: 0 100% 65%;
+    --destructive-foreground: 220 30% 3%;
+
+    --border: 220 22% 15%;
+    --input: 220 22% 12%;
+    --ring: 180 100% 55%;
+
+    --sidebar-background: 220 25% 6%;
+    --sidebar-foreground: 180 100% 98%;
+    --sidebar-primary: 180 100% 55%;
+    --sidebar-primary-foreground: 220 30% 3%;
+    --sidebar-accent: 220 20% 12%;
+    --sidebar-accent-foreground: 180 100% 98%;
+    --sidebar-border: 220 22% 15%;
+    --sidebar-ring: 180 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  /* Smooth theme transitions */
+  * {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+  }
+
+  /* Urdu font support */
+  .font-urdu {
+    font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif;
+  }
+}
+
+@layer components {
+  /* Glassmorphic Cards with Neon Borders */
+  .story-card {
+    @apply relative overflow-hidden;
+    @apply bg-gradient-to-br from-card/40 via-card/60 to-card/40;
+    @apply backdrop-blur-xl border border-primary/30 rounded-3xl;
+    @apply transition-all duration-500 ease-out;
+    box-shadow: var(--shadow-glass), inset 0 1px 1px hsl(180 100% 50% / 0.1);
+  }
+
+  .story-card::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-500;
+    background: var(--gradient-mesh);
+    z-index: -1;
+  }
+
+  .story-card:hover {
+    @apply border-primary/60 scale-[1.03] -translate-y-1;
+    box-shadow: var(--shadow-neon-cyan);
+  }
+
+  .story-card:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Animated Neon Badge */
+  .agent-badge {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium;
+    @apply bg-primary/10 text-primary border border-primary/20;
+    @apply animate-pulse;
+  }
+
+  /* Urgency indicators */
+  .urgency-critical {
+    @apply bg-red-50 border-red-200 text-red-700 dark:bg-red-950 dark:border-red-800 dark:text-red-400;
+  }
+
+  .urgency-high {
+    @apply bg-orange-50 border-orange-200 text-orange-700 dark:bg-orange-950 dark:border-orange-800 dark:text-orange-400;
+  }
+
+  .urgency-moderate {
+    @apply bg-yellow-50 border-yellow-200 text-yellow-700 dark:bg-yellow-950 dark:border-yellow-800 dark:text-yellow-400;
+  }
+
+  .urgency-low {
+    @apply bg-green-50 border-green-200 text-green-700 dark:bg-green-950 dark:border-green-800 dark:text-green-400;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-glow;
+  }
+
+  /* 3D Card Flip Utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
